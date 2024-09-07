@@ -13,3 +13,7 @@ body{
 a{
   text-decoration: none;
 }
+.page{
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
