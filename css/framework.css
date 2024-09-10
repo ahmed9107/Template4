@@ -7,7 +7,13 @@
   --grey-color: #888;
 }
 /* Start box */
-.d-flex{
+.d-flex {
   display: flex;
+}
+.f-wrap {
+  flex-wrap: wrap;
+}
+.align-center {
+  align-items: center;
 }
 /* End box */
