@@ -21,3 +21,9 @@ ul {
   background-color: #f1f5f9;
   min-height: 100vh;
 }
+/* Start Sidebar */
+.sidebar{
+  width: 250px;
+  box-shadow: 0 0 10px #ddd;
+}
+/* End Sidebar */
