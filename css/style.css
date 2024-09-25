@@ -7,6 +7,14 @@ body{
   font-family: "Open sans", "sans-serif";
   margin: 0;
 }
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+}
 *:focus{
   outline: none;
 }
@@ -16,6 +24,18 @@ a{
 ul {
   list-style: none;
   padding: 0;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-color);
 }
 .page{
   background-color: #f1f5f9;
@@ -112,6 +132,12 @@ ul {
   right: -5px;
   top: -5px;
 }
+.head .search input:focus {
+  width: 200px;
+}
+.head .search input:focus::placeholder {
+  opacity: 0;
+}
 .head .icons img{
   width: 32px;
   height: 32px;
@@ -121,9 +147,77 @@ ul {
 .page h1 {
   margin: 20px 20px 40px;
 }
-.page h1::before{
-  content: "";
-}
+.page h1::before,
 .page h1::after{
   content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 3px;
+  left: 0;
 }
+.page h1::before{
+  width: 120px;
+  background-color: #ffffff;
+}
+.page h1::after{
+  width: 40px;
+  background-color: #000000;
+}
+
+.wrapper{
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .wrapper{
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+/* Start Welcome Widget */
+.welcome{
+  overflow: hidden;
+}
+.welcome .intro img {
+  width: 170px;
+  margin-bottom: -10px;
+}
+.welcome .avatar {
+  width: 64px;
+  height: 64px;
+  margin-left: 20px;
+  margin-top: -32px;
+  padding: 2px;
+  border: 2px solid white;
+  box-shadow: 0 0 5px #ddd;
+  border-radius: 50%;
+}
+.welcome .body{
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.welcome .body > div{
+  flex: 1;
+}
+.welcome .visit {
+  margin: 0 15px 15px auto;
+  transition: 0.3s;
+}
+.welcome .visit:hover{
+  background-color: var(--blue-alt-color);
+}
+@media (max-width: 767px) {
+  .welcome .intro{
+    padding-bottom: 30px;
+  }
+  .welcome .avatar{
+    margin-left: 0;
+  }
+  .welcome .body > div:not(:last-child){
+    margin-bottom: 15px;
+  }
+}
+/* End Welcome Widget */
