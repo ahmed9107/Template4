@@ -305,3 +305,35 @@ ul {
   }
 }
 /* End Tickets Widget */
+/* Start Latest News Widget */
+.latest-news .news-row{
+  padding: 15px 0;
+}
+.latest-news .news-row:not(:last-child){
+  border-bottom: 1px solid #eee;
+}
+.latest-news .news-row img{
+  width: 100px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.latest-news .news-row .info{
+  flex: 1;
+}
+.latest-news .news-row .info h3{
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+  .latest-news .news-row{
+    flex-direction: column;
+  }
+  .latest-news .news-row img{
+    margin-bottom: 10px;
+    margin-right:0
+  }
+  .latest-news .news-row .label{
+    margin-top: 15px;
+  }
+}
+/* End Latest News Widget */
