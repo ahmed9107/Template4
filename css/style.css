@@ -168,6 +168,7 @@ ul {
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .wrapper{
@@ -351,3 +352,51 @@ ul {
   color: var(--red-color);
 }
 /* End Tasks Widget */
+/* Start Latest Upload */
+.latest-uploads li:not(:last-child){
+  border-bottom: 1px solid #eee;
+}
+/* End Latest Upload */
+/* Start Last Project Progress Widget */
+.last-project img{
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  width: 175px;
+  opacity: 0.1;
+}
+.last-project ul::before{
+  content: "";
+  position: absolute;
+  left: 11px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--blue-color);
+}
+.last-project ul li::before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  outline: 3px solid var(--blue-color);
+  margin-right: 20px;
+  z-index: 1;
+}
+.last-project ul li.done::before {
+  background-color: var(--blue-color);
+}
+.last-project ul li.current::before {
+  animation: change-bg 1.5s infinite;;
+}
+@keyframes change-bg {
+  0%, 100% {
+    background-color: white;
+  }
+  50% {
+    background-color: var(--blue-color);
+  }
+}
+/* End Last Project Progress Widget */
