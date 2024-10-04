@@ -427,7 +427,7 @@ ul {
 .social-media .box {
   padding-left: 70px;
 }
-.social-media .box i {
+.social-media .box i{
   position: absolute;
   left: 0;
   top: 0;
@@ -470,6 +470,28 @@ ul {
   background-color: #0077b5;
 }
 /* End Social Media Stats Widget */
+/* Start Projects Widget*/
+.projects{
+  grid-column: 1 / span 2;
+}
+.responsive-table{
+  width: 100%;
+}
+.responsive-table thead tr{
+  text-align: left;
+  background-color: #04AA6D;
+}
+.responsive-table tr{
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+.responsive-table tbody tr img{
+  width: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline;
+}
+/* End Projects Widget*/
 /* Start Animation */
 @keyframes change-bg-clr {
   from {
