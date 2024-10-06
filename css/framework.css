@@ -234,6 +234,12 @@
 .h-100 {
   height: 100px;
 }
+.h-150 {
+  height: 150px;
+}
+.h-200 {
+  height: 200px;
+}
 /* End Width + Height */
 /* Start Components */
 .center-flex {
