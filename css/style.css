@@ -166,7 +166,6 @@ ul {
   width: 40px;
   background-color: #000000;
 }
-
 .wrapper{
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   margin-left: 20px;
@@ -518,6 +517,28 @@ ul {
 }
 /* End Projects Widget*/
 /* Start Settings */
+.settings-page{
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+@media (max-width: 767px) {
+  .settings-page{
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+.settings-page .close-message{
+  resize: none;
+  border-color: #ccc;
+}
+.settings-page .email{
+  background-color: #f0f4f8;
+}
+.settings-page .sec-box:not(:last-child){
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
 .toggle-checkbox {
   -webkit-appearance: none;
   appearance: none;
