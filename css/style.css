@@ -621,13 +621,13 @@ ul {
 .backup-control .date label::after{
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   border-radius: 50%;
 }
 .backup-control .date label::before{
   content: "";
   width: 18px;
   height: 18px;
+  margin-top: -11px;
   left: 0;
   border: 2px solid var(--grey-color);
 }
@@ -636,15 +636,16 @@ ul {
 }
 .backup-control .date label::after{
   content: "";
-  width: 0px;
-  height: 0px;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
   background-color: var(--blue-color);
-  left: 4px;
+  left: 5px;
+  transform: scale(0);
   transition: 0.3s;
 }
 .backup-control .date input[type="radio"]:checked + label::after{
-  width: 14px;
-  height: 14px;
+  transform: scale(1);
 }
 .backup-control .date input[type="radio"]:checked + label::before{
   border-color: var(--blue-color);
@@ -663,13 +664,13 @@ ul {
   appearance: none;
 }
 .backup-control .servers .server{
+  cursor: pointer;
   border: 2px solid #eee;
 }
 .backup-control .servers input[type="radio"]:checked + .server{
   border-color: var(--blue-color);
   color: var(--blue-color);
 }
-
 /* Toggle Button */
 .toggle-checkbox {
   -webkit-appearance: none;
@@ -711,7 +712,16 @@ ul {
   color: var(--blue-color);
 }
 /* End Settings */
-/* Start Animation */
+/* Start Profile */
+/* Start Profile */
+.profile-page .avatar-box{
+  border-right: 1px solid #eee;
+}
+.profile-page .avatar-box img{
+  width: 125px;
+  height: 125px;
+}
+/* End Animation */
 @keyframes change-bg-clr {
   from {
     background-color: white;
