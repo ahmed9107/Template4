@@ -779,11 +779,6 @@ ul {
 .profile-page .info-box .box .toggle-checkbox:checked + .toggle-switch::before {
   left: 67px;
 }
-@media (max-width: 992px) {
-  .profile-page .other-data {
-    flex-direction: column;
-  }
-}
 .profile-page .other-data .skills-card ul li{
   padding: 20px;
 }
