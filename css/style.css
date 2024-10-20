@@ -1046,6 +1046,18 @@ ul {
 .plans-page .orange .top{
   outline: 3px solid var(--orange-color);
 }
+.plans-page .plan .price{
+  position: relative;
+  font-size: 40px;
+  width: fit-content;
+  margin: auto;
+}
+.plans-page .plan .price span{
+  position: absolute;
+  left: -20px;
+  top: 0;
+  font-size: 25px;
+}
 .plans-page .plan li{
   display: flex;
   align-items: center;
@@ -1061,7 +1073,7 @@ ul {
   margin-left: auto;
   cursor: pointer;
 }
-.plans-page .plan li i{
+.plans-page .plan ul li i:not(.yes, .help) {
   color: var(--red-color);
 }
 /* End Plans */
